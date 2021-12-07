@@ -33,7 +33,7 @@ public class TpaAccept implements CommandExecutor{
 			
 		}
 		else {
-			p.sendMessage(Mainclass.prefix + " §c/tpaccept");
+			p.sendMessage(Mainclass.prefix + " §c/tpaaccept");
 		}
 			
 		

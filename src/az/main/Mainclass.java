@@ -8,6 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import az.commands.Tpa;
 import az.commands.TpaAccept;
+import az.commands.TpaCancel;
 import az.commands.TpaDeny;
 
 
@@ -21,8 +22,9 @@ public class Mainclass extends JavaPlugin{
 	public void onEnable(){
 		Bukkit.getConsoleSender().sendMessage(prefix+ "§7enabled");
 		this.getCommand("tpa").setExecutor(new Tpa());
-		this.getCommand("tpaccept").setExecutor(new TpaAccept());
+		this.getCommand("tpaaccept").setExecutor(new TpaAccept());
 		this.getCommand("tpadeny").setExecutor(new TpaDeny());
+		this.getCommand("tpacancel").setExecutor(new TpaCancel());
 
 	}
 	

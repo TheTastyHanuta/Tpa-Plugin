@@ -4,6 +4,7 @@ author: Hanuta
 main: az.main.Mainclass
 commands:
   tpa:
-  tpaccept:
+  tpaaccept:
   tpadeny:
+  tpacancel:
 
