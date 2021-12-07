@@ -12,6 +12,8 @@ public class TpaAccept implements CommandExecutor{
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
+		if(sender instanceof Player) {
+		
 		Player p = (Player) sender;
 		
 		if(args.length == 0) {
@@ -36,7 +38,7 @@ public class TpaAccept implements CommandExecutor{
 			p.sendMessage(Mainclass.prefix + " §c/tpaaccept");
 		}
 			
-		
+		}
 		return false;
 	}
 

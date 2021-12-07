@@ -13,6 +13,8 @@ public class TpaCancel implements CommandExecutor{
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
+		if(sender instanceof Player) {
+		
 		Player p = (Player) sender;	
 		
 		if(args.length == 1) {
@@ -43,11 +45,8 @@ public class TpaCancel implements CommandExecutor{
 
 		}else {
 			p.sendMessage(Mainclass.prefix + "§cGib bitte den Namen des Spielers mit an!");
+		}	
 		}
-		
-		
-		
-		
 		return false;
 		
 	

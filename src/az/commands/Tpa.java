@@ -16,6 +16,8 @@ public class Tpa implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
+		if(sender instanceof Player) {
+			
 		Player p = (Player)sender;
 		Player p2 = Bukkit.getPlayer(args[0]);
 		
@@ -33,7 +35,7 @@ public class Tpa implements CommandExecutor {
 			 	
 			p2.sendMessage(Mainclass.prefix + p.getName() + "§a möchte sich zu dir teleportieren! Benutze §c/tpaaccept §aum die Anfrage anzunehmen oder §c/tpadeny §aum sie abzulehnen! Du hast 5 Minuten Zeit!");
 			
-			p.sendMessage(Mainclass.prefix + "§a" + p2.getName() + " hat die Anfrage bekommen! Nutze /tpacancel <Spielername> um sie abzubrechen!");
+			p.sendMessage(Mainclass.prefix + "§a" + p2.getName() + " hat die Anfrage bekommen! Nutze §c/tpacancel §8<Spielername>§a um sie abzubrechen!");
 			
 			new java.util.Timer().schedule(
 					new java.util.TimerTask() {
@@ -59,6 +61,7 @@ public class Tpa implements CommandExecutor {
 		else
 		{
 			p.sendMessage(Mainclass.prefix + "§cBitte benutze /tpa <SPIELER>!");
+		}
 		}
 		return false;
 	}
