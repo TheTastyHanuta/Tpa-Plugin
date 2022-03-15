@@ -24,18 +24,18 @@ public class TpaAccept implements CommandExecutor{
 			
 			p2.teleport(p.getLocation());
 			
-			p.sendMessage(Mainclass.prefix + "§aTeleportation war erfolgreich!");
+			p.sendMessage(Mainclass.prefix + "Â§aTeleportation war erfolgreich!");
 			
-			p2.sendMessage(Mainclass.prefix + "§aTeleportation war erfolgreich!");
+			p2.sendMessage(Mainclass.prefix + "Â§aTeleportation war erfolgreich!");
 			
 			Mainclass.tpa.remove(p, p2);
 			}catch(Exception ex){
-				p.sendMessage(Mainclass.prefix + "§cDu hast keine Anfrage!");
+				p.sendMessage(Mainclass.prefix + "Â§cDu hast keine Anfrage!");
 			}
 			
 		}
 		else {
-			p.sendMessage(Mainclass.prefix + " §c/tpaaccept");
+			p.sendMessage(Mainclass.prefix + " Â§c/tpaaccept");
 		}
 			
 		}

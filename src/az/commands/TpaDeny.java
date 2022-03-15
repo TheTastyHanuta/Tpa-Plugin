@@ -23,18 +23,18 @@ public class TpaDeny implements CommandExecutor{
 			Player p2 = Mainclass.tpa.get(p);
 			
 			
-			p.sendMessage(Mainclass.prefix + "§aTeleportation abgelehnt!");
+			p.sendMessage(Mainclass.prefix + "Â§aTeleportation abgelehnt!");
 			
-			p2.sendMessage(Mainclass.prefix + "§aTeleportation abgelehnt!");
+			p2.sendMessage(Mainclass.prefix + "Â§aTeleportation abgelehnt!");
 			
 			Mainclass.tpa.remove(p, p2);
 			}catch(Exception ex){
-				p.sendMessage(Mainclass.prefix + "§cDu hast keine Anfrage!");
+				p.sendMessage(Mainclass.prefix + "Â§cDu hast keine Anfrage!");
 			}
 			
 		}
 		else {
-			p.sendMessage(Mainclass.prefix + " §c/tpadeny");
+			p.sendMessage(Mainclass.prefix + " Â§c/tpadeny");
 		}
 			
 		}
