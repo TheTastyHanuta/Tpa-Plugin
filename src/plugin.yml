@@ -1,5 +1,5 @@
 name: Tpa-Plugin
-version: 1.0
+version: 1.1
 author: Hanuta
 main: az.main.Mainclass
 commands:

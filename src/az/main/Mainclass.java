@@ -14,13 +14,13 @@ import az.commands.TpaDeny;
 
 public class Mainclass extends JavaPlugin{
 	
-	public static String prefix = "Â§8[Â§3ServerÂ§8] ";
-	public static String noPerm = prefix + "Â§cDu hast keine Rechte dazu!";
+	public static String prefix = "§8[§3Tpa-Plugin§8] ";
+	public static String noPerm = prefix + "§cDu hast keine Rechte dazu!";
 	public static HashMap<Player, Player> tpa = new HashMap<Player, Player>();
 
 
 	public void onEnable(){
-		Bukkit.getConsoleSender().sendMessage(prefix+ "Â§7enabled");
+		Bukkit.getConsoleSender().sendMessage(prefix+ "§7enabled");
 		this.getCommand("tpa").setExecutor(new Tpa());
 		this.getCommand("tpaaccept").setExecutor(new TpaAccept());
 		this.getCommand("tpadeny").setExecutor(new TpaDeny());
@@ -29,7 +29,7 @@ public class Mainclass extends JavaPlugin{
 	}
 	
 	public void onDisable(){
-		Bukkit.getConsoleSender().sendMessage(prefix+ "Â§7disabled");
+		Bukkit.getConsoleSender().sendMessage(prefix+ "§7disabled");
 	}
 
 }
