@@ -14,7 +14,7 @@ import az.commands.TpaDeny;
 
 public class Mainclass extends JavaPlugin{
 	
-	public static String prefix = "§8[§3Server§8] ";
+	public static String prefix = "§8[§3Tpa-Plugin§8] ";
 	public static String noPerm = prefix + "§cDu hast keine Rechte dazu!";
 	public static HashMap<Player, Player> tpa = new HashMap<Player, Player>();
 
