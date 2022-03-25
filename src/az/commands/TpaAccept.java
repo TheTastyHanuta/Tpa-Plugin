@@ -43,11 +43,28 @@ public class TpaAccept implements CommandExecutor{
 	            	   Location Playerone =lastLoc.get(p);
             		   Location Playertwo =lastLoc2.get(p2);
             		   
+            		   lastLoc.remove(p);
+            		   lastLoc2.remove(p2);
+            		   
             		   Double distance1 = Playerone.distance(p.getLocation());
             		   Double distance2 = Playertwo.distance(p2.getLocation());
             		   
+            		
+            		   
+            		   try {
+            			   Player p3 = Mainclass.tpa.get(p);
+            			   p3.getLocation();
+            			   
+            		   }catch (Exception ex) {
+    						Mainclass.tpa.remove(p, p2);
+    					
+    						return;
+            		   }
+            		   
+            		   
+            		   
             		   if((distance1==0.0)&&(distance2==0.0)) {
-            			   try {
+            			  
     	            		   
        	            		
     	            		   Player p3 = Mainclass.tpa.get(p);
@@ -59,13 +76,12 @@ public class TpaAccept implements CommandExecutor{
     							p3.sendMessage(Mainclass.prefix + "§aTeleportation war erfolgreich!");
     							Mainclass.tpa.remove(p, p2);
     						
-    					} catch (Exception ex) {
-    						p.sendMessage(Mainclass.prefix + "§aDie Anfrage wurde abgebrochen!");
-    					}
+    					
             			   
             		   }else {
             			   p.sendMessage(Mainclass.prefix + "§cEiner von euch hat sich bewegt!");
             			   p2.sendMessage(Mainclass.prefix + "§cEiner von euch hat sich bewegt!");
+            			   Mainclass.tpa.remove(p, p2);
             		   }
             		   	          	           	   	            	             	   	            	   
 	               }
@@ -73,7 +89,8 @@ public class TpaAccept implements CommandExecutor{
 			
 			
 			}catch(Exception ex){
-				
+				p.sendMessage(Mainclass.prefix + "§cDu hast keine Anfrage!");
+				return false;
 			}
 			
 		}
